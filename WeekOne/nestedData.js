@@ -25,6 +25,8 @@ const composer = {
   // a variable called 'fullName'.
   
   // CODE HERE
+
+  var fullName = `${composer.firstName} ${composer.lastName}`;
   
   // Create a new variable called 'favoriteChild'. Let its
   // value be the child with the longest name (because
@@ -32,20 +34,31 @@ const composer = {
   // their parents' favorites.)
   
   // CODE HERE
+
+  var favoriteChild = "";
+  for(var i = 0; i < composer.children.length; i++) {
+    if (composer.children[i].length > favoriteChild.length) {favoriteChild = composer.children[i]};
+  }
   
   // Create another variable called 'mouthsToFeed' and set its value to be
   // the length of the children array.
   
   // CODE HERE
+
+  var mouthsToFeed = composer.children.length;
   
   // Console log the compositions array. What is going to happen?
   
   // CODE HERE
+
+  console.log(composer.compositions);
   
   // Create a variable called 'fruitless'. The value of this variable should
   // be the length of the compositions array.
   
   // CODE HERE
+
+  var fruitless = composer.compositions.length;
   
   // Invoke the 'compose' function on our composer object. The function has
   // a parameter of 'piece'. Give the compose function an argument of
@@ -55,6 +68,8 @@ const composer = {
   // called 'prolific'.
   
   // CODE HERE
+
+  var prolific = composer.compose('Twinkle Twinkle Little Star');
   
   /* Don't change below this line */
   const composers = [
@@ -134,10 +149,14 @@ const composer = {
   // Access Beethoven's country
   
   // CODE HERE
+
+  composers[0].country
   
   // Access 'Harry Potter' from John William's list of compositions
   
   // CODE HERE
+
+  composers[2].compositions[2];
   
   // Neal Hefti composed using math. Here's his composition:
   /* Don't change below this line */
@@ -154,5 +173,9 @@ const composer = {
   // an argument.
   
   // CODE HERE
+
+  composers[3].compose(song);
   
   // Now that we have updated Neal's compositions, console log Neal Hefti's compositions
+
+  console.log(composers[3].compositions);
